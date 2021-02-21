@@ -1,17 +1,20 @@
+@import 'assets/css/variables';
+
 * {
     margin: 0;
     padding: 0;
-        box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 html, body {
-    background-color: #F2F2F2;
+    background-color: $lightgrey;
     max-width: 1440px;
     margin: auto;
+    font-family: $font;
 }
 
 .btn {
-    background-color: #C4E099;
+    background-color: $primaryFade;
     border: 0;
     border-radius: 3px;
     padding: 5px 15px;
@@ -19,9 +22,9 @@ html, body {
 }
 
 .btn.active{
-    background-color: #79B504;
+    background-color: $primary;
 }
 
 .titleColor{
-    color: #474E85;
+    color: $secondary;
 }

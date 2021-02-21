@@ -1,11 +1,14 @@
+@import '../../../../../assets/css/variables';
+
 .program{
-    background-color: white;
+    background-color: $white;
     padding: 15px;
     border-radius: 5px;
     min-height: 460px;
     .programImage{
-        background-color: #F2F2F2;
+        background-color: $lightgrey;
         text-align: center;
+        min-height: 160px;
     }
     .programDetails{
         h3{

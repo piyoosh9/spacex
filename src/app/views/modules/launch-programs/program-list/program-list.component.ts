@@ -43,7 +43,10 @@ export class ProgramListComponent implements OnInit, OnDestroy {
       } else {
         this.isYearFilter = 0;
       }
-      this.fetchLaunches();
+      this.isSearching = true;
+      setTimeout(() => {
+        this.fetchLaunches();
+      }, 100);
     });
   }
 
@@ -52,7 +55,6 @@ export class ProgramListComponent implements OnInit, OnDestroy {
   }
 
   fetchLaunches() {
-    this.isSearching = true;
     this._programsService.fetchLaunches(this.launchFilters).subscribe(data => {
       this.isSearching = false;
       this.programs = data;

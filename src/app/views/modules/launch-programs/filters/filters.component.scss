@@ -1,5 +1,7 @@
+@import '../../../../../assets/css/variables';
+
 #filters{
-    background-color: white;
+    background-color: $white;
     padding: 10px;
     border-radius: 5px;
     #filterContainerHeader{
@@ -19,7 +21,7 @@
         .filterHeader{
             p{
                 width: 80%;
-                border-bottom: 1px solid grey;
+                border-bottom: 1px solid $secondary;
                 text-align: center;
                 margin: auto;
                 padding-bottom: 5px;
