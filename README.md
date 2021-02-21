@@ -2,26 +2,25 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.1.
 
-## Development server
+## Tech Stack
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+HTML5, SCSS, Angular, Angular Universal (For SSR)
 
-## Code scaffolding
+## Deployment Server
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Heroku, Application URL: [SpaceX Launch Programs](https://infinite-tor-06221.herokuapp.com/)
 
-## Build
+## Approach
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+1. Started with making a new project using angular cli - with scss and routing
+2. Created the html with keeping accessibility in mind according to the given design
+3. Binded the api provided in the document
+4. Added Angular Universal to the app for server side rendering
+5. Added Service Worker to the app for caching
+6. Generated the lighthouse report, and worked on recommendation provided, to imporve website performance
+7. Deployed the app on heroku
 
-## Running unit tests
+## Lighthouse report
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+1. Mobile: Performance - 88, Accessibility - 98, Best Practices - 93, SEO - 100, PWA (Fast and Reliabe: 3/3, Installable: 3/3, PWA Optimized: 6/8)
+2. Desktop: Performance - 86, Accessibility - 98, Best Practices - 100, SEO - 100, PWA (Fast and Reliabe: 3/3, Installable: 3/3, PWA Optimized: 6/8)
