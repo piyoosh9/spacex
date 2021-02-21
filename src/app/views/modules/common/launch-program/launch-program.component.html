@@ -1,6 +1,6 @@
-<div class="program">
+<div class="program" *ngIf="program">
     <div class="programImage">
-        <img tabindex="0" [alt]="program.mission_name" [attr.aria-label]="program.mission_name + ' Image'" width="100%"
+        <img tabindex="0" height="300" [alt]="program.mission_name" [attr.aria-label]="program.mission_name + ' Image'" width="300px"
         [src]="program?.links?.mission_patch_small" loading="lazy">
     </div>
     <div class="programDetails">

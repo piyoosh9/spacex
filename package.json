@@ -6,7 +6,7 @@
     "postinstall": "npm run build:ssr",
     "ng": "ng",
     "start": "ng serve -o --hmr",
-    "build": "ng build",
+    "build": "ng build --prod && ng run spacex:server:production",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
