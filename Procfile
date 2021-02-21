@@ -1,1 +1,1 @@
-web: npm run serve:ss
+web: npm run start:heroku
