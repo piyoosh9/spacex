@@ -1,0 +1,28 @@
+#filters{
+    background-color: white;
+    padding: 10px;
+    border-radius: 5px;
+    .filterTypeContainer{
+        .filterHeader{
+            p{
+                width: 80%;
+                border-bottom: 1px solid grey;
+                text-align: center;
+                margin: auto;
+                padding-bottom: 5px;
+            }
+        }
+        .filterBody{
+            padding: 10px;
+            display: flex;
+            flex-wrap: wrap;
+            & > div {
+                flex: 50%;
+                padding: 5px 0;
+            }
+            & > div:nth-child(even){
+                text-align: right;
+            }
+        }
+    }
+}

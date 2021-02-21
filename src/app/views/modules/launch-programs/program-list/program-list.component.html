@@ -1,0 +1,18 @@
+<main>
+    <aside>
+        <app-filters (yearFilter)="yearFilter($event)" (landFilter)="landFilter($event)" (launchFilter)="launchFilter($event)"></app-filters>
+    </aside>
+    <section>
+        <div id="programListContainer" *ngIf="programs && programs.length && !isSearching">
+            <div class="programContainer" *ngFor="let program of programs">
+                <app-launch-program [program]="program"></app-launch-program>
+            </div>
+        </div>
+        <div id="programListNotFound" *ngIf="isSearching || programs.length === 0">
+            <h3>
+                <span *ngIf="!isSearching && programs.length === 0">No launch programs found.</span>
+                <span *ngIf="isSearching">Loading...</span>
+            </h3>
+        </div>
+    </section>
+</main>

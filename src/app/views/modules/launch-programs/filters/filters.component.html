@@ -1,0 +1,45 @@
+<div id="filters">
+    <h3 tabindex="0">Filters</h3>
+    <div class="filterTypeContainer">
+        <div class="filterHeader">
+            <p tabindex="0">
+                Launch Year
+            </p>
+        </div>
+        <div class="filterBody">
+            <div *ngFor="let year of launchYears">
+                <button (click)="toggleLaunchYear(year)" class="btn" [ngClass]="{'active': isYearFilter == year}">{{year}}</button>
+            </div>
+        </div>
+    </div>
+    <div class="filterTypeContainer">
+        <div class="filterHeader">
+            <p tabindex="0">
+                Successful Launch
+            </p>
+        </div>
+        <div class="filterBody">
+            <div>
+                <button (click)="launchSuccess('true')" class="btn" [ngClass]="{'active': isLaunchFilter == 'true'}">True</button>
+            </div>
+            <div>
+                <button (click)="launchSuccess('false')" class="btn" [ngClass]="{'active': isLaunchFilter == 'false'}">False</button>
+            </div>
+        </div>
+    </div>
+    <div class="filterTypeContainer">
+        <div class="filterHeader">
+            <p tabindex="0">
+                Successful Landing
+            </p>
+        </div>
+        <div class="filterBody">
+            <div>
+                <button (click)="landSuccess('true')" class="btn" [ngClass]="{'active': isLandFilter == 'true'}">True</button>
+            </div>
+            <div>
+                <button (click)="landSuccess('false')" class="btn" [ngClass]="{'active': isLandFilter == 'false'}">False</button>
+            </div>
+        </div>
+    </div>
+</div>

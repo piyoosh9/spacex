@@ -1,0 +1,26 @@
+<div class="program">
+    <div class="programImage">
+        <img tabindex="0" width="100%" [src]="program?.links?.mission_patch_small">
+    </div>
+    <div class="programDetails">
+        <h3 tabindex="0" class="titleColor">{{program.mission_name}} #{{program.flight_number}}</h3>
+        <div>
+            <strong tabindex="0">Mission Ids: </strong>
+            <ul *ngIf="program.mission_id && program.mission_id.length">
+                <li *ngFor="let id of program.mission_id" tabindex="0" class="titleColor">{{id}}</li>
+            </ul>
+        </div>
+        <div>
+            <strong tabindex="0">Launch Year: </strong>
+            <span tabindex="0" class="titleColor">{{program.launch_year}}</span>
+        </div>
+        <div>
+            <strong tabindex="0">Successful Launch: </strong>
+            <span tabindex="0" class="titleColor">{{program.launch_success}}</span>
+        </div>
+        <div>
+            <strong tabindex="0">Successful Landing: </strong>
+            <span tabindex="0" class="titleColor">{{successLanding}}</span>
+        </div>
+    </div>
+</div>

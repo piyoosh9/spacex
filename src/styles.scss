@@ -1,0 +1,27 @@
+* {
+    margin: 0;
+    padding: 0;
+        box-sizing: border-box;
+}
+
+html, body {
+    background-color: #F2F2F2;
+    max-width: 1440px;
+    margin: auto;
+}
+
+.btn {
+    background-color: #C4E099;
+    border: 0;
+    border-radius: 3px;
+    padding: 5px 15px;
+    cursor: pointer;
+}
+
+.btn.active{
+    background-color: #79B504;
+}
+
+.titleColor{
+    color: #474E85;
+}
