@@ -11,7 +11,7 @@ import { SpaceXCommonModule } from './views/modules/common/common.module';
     AppComponent
   ],
   imports: [
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
     AppRoutingModule,
     HttpClientModule,
     SpaceXCommonModule
