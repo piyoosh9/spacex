@@ -1,4 +1,4 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-filters',
@@ -8,13 +8,13 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 export class FiltersComponent implements OnInit {
 
   launchYears: number[] = [2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020 ];
-  isLaunchFilter: string = '';
-  isLandFilter: string = '';
-  isYearFilter: number = 0;
-
+  @Input() isLaunchFilter: string = '';
+  @Input() isLandFilter: string = '';
+  @Input() isYearFilter: number = 0;
   @Output() yearFilter: EventEmitter <any> = new EventEmitter();
   @Output() landFilter: EventEmitter <any> = new EventEmitter();
   @Output() launchFilter: EventEmitter <any> = new EventEmitter();
+  @Output() clearFilter: EventEmitter <any> = new EventEmitter();
 
   constructor() { }
 
@@ -34,6 +34,10 @@ export class FiltersComponent implements OnInit {
   launchSuccess(success: string) {
     this.isLaunchFilter = success;
     this.launchFilter.emit(this.getEmitValue(success));
+  }
+
+  clearFilters(){
+    this.clearFilter.emit();  
   }
 
   getEmitValue(type: string) {

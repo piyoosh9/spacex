@@ -1,5 +1,8 @@
 <div id="filters">
-    <h3 tabindex="0">Filters</h3>
+    <div id="filterContainerHeader">
+        <h3 tabindex="0" aria-label="Filters">Filters</h3>
+        <a id="clearFilter" tabindex="0" *ngIf="isLaunchFilter || isLandFilter || isYearFilter" (click)="clearFilters()" aria-label="Clear Filter">Clear Filter</a>
+    </div>
     <div class="filterTypeContainer">
         <div class="filterHeader">
             <p tabindex="0">
@@ -8,7 +11,7 @@
         </div>
         <div class="filterBody">
             <div *ngFor="let year of launchYears">
-                <button (click)="toggleLaunchYear(year)" class="btn" [ngClass]="{'active': isYearFilter == year}">{{year}}</button>
+                <button [attr.aria-label]="'Launch Year ' + year" (click)="toggleLaunchYear(year)" class="btn" [ngClass]="{'active': isYearFilter == year}">{{year}}</button>
             </div>
         </div>
     </div>
@@ -20,10 +23,10 @@
         </div>
         <div class="filterBody">
             <div>
-                <button (click)="launchSuccess('true')" class="btn" [ngClass]="{'active': isLaunchFilter == 'true'}">True</button>
+                <button aria-label="Successful Launch True" (click)="launchSuccess('true')" class="btn" [ngClass]="{'active': isLaunchFilter == 'true'}">True</button>
             </div>
             <div>
-                <button (click)="launchSuccess('false')" class="btn" [ngClass]="{'active': isLaunchFilter == 'false'}">False</button>
+                <button aria-label="Successful Launch False" (click)="launchSuccess('false')" class="btn" [ngClass]="{'active': isLaunchFilter == 'false'}">False</button>
             </div>
         </div>
     </div>
@@ -35,10 +38,10 @@
         </div>
         <div class="filterBody">
             <div>
-                <button (click)="landSuccess('true')" class="btn" [ngClass]="{'active': isLandFilter == 'true'}">True</button>
+                <button aria-label="Successful Landing True" (click)="landSuccess('true')" class="btn" [ngClass]="{'active': isLandFilter == 'true'}">True</button>
             </div>
             <div>
-                <button (click)="landSuccess('false')" class="btn" [ngClass]="{'active': isLandFilter == 'false'}">False</button>
+                <button aria-label="Successful Landing False" (click)="landSuccess('false')" class="btn" [ngClass]="{'active': isLandFilter == 'false'}">False</button>
             </div>
         </div>
     </div>

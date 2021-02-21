@@ -1,6 +1,6 @@
 <main>
     <aside>
-        <app-filters (yearFilter)="yearFilter($event)" (landFilter)="landFilter($event)" (launchFilter)="launchFilter($event)"></app-filters>
+        <app-filters [isLandFilter]="isLandFilter" (clearFilter)="clearFilter()" [isYearFilter]="isYearFilter" [isLaunchFilter]="isLaunchFilter" (yearFilter)="yearFilter($event)" (landFilter)="landFilter($event)" (launchFilter)="launchFilter($event)"></app-filters>
     </aside>
     <section>
         <div id="programListContainer" *ngIf="programs && programs.length && !isSearching">
