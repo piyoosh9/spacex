@@ -1,6 +1,7 @@
 <div class="program">
     <div class="programImage">
-        <img tabindex="0" [alt]="program.mission_name" [attr.aria-label]="program.mission_name + ' Image'" width="100%" [src]="program?.links?.mission_patch_small">
+        <img tabindex="0" [alt]="program.mission_name" [attr.aria-label]="program.mission_name + ' Image'" width="100%"
+        [src]="program?.links?.mission_patch_small" loading="lazy">
     </div>
     <div class="programDetails">
         <h3 [attr.aria-label]="program.mission_name" tabindex="0" class="titleColor">{{program.mission_name}} #{{program.flight_number}}</h3>
