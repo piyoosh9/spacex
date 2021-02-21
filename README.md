@@ -24,3 +24,6 @@ Heroku, Application URL: [SpaceX Launch Programs](https://infinite-tor-06221.her
 
 1. Mobile: Performance - 88, Accessibility - 98, Best Practices - 93, SEO - 100, PWA (Fast and Reliabe: 3/3, Installable: 3/3, PWA Optimized: 6/8)
 2. Desktop: Performance - 86, Accessibility - 98, Best Practices - 100, SEO - 100, PWA (Fast and Reliabe: 3/3, Installable: 3/3, PWA Optimized: 6/8)
+
+![Mobile Lighthouse Report](https://drive.google.com/file/d/1Qdz0264lBxCmHqsZx4wTSV7qU0YxGzAq/view?usp=sharing)
+![Desktop Lighthouse Report](https://drive.google.com/file/d/1gUoBYd59cdpmGYLtMhHrOD87JYSW0Uh1/view?usp=sharing)
